@@ -5,7 +5,7 @@
 - NEORV32, commit `5f4b5b0c13b692476783c5b0cbc8e40e3093c085`.
 - GHDL con soporte VHDL-2008 para simulación y elaboración.
 - GNU Make, compilador C de anfitrión y toolchain RISC-V con RV32, ABI ILP32 y soporte para `rv32imc_zicsr_zifencei`. La comprobación se hizo con xPack GNU RISC-V Embedded GCC 15.2.0.
-- Para pruebas físicas se necesita una Basys 3 configurada con el SoC, enlace serie y un proyecto FPGA con restricciones de pines y reloj de la placa.
+- Para pruebas físicas se necesita una Basys 3 configurada con el SoC, enlace serie y Vivado 2025.2. Las restricciones y scripts están en `vivado/`; sigue [Implementación en Basys 3](vivado.md).
 
 Desde la raíz de la entrega, prepara la dependencia en un directorio hermano.
 
@@ -16,7 +16,7 @@ export NEORV32_HOME="$(cd ../neorv32-mpei && pwd)"
 ./scripts/verificar-vhdl.sh
 ```
 
-El script ejecuta los bancos y, con `NEORV32_HOME` definido, analiza la lista de fuentes oficial en la biblioteca `neorv32` y elabora `neorv32_tcu_top`. Para integrar el diseño en la herramienta FPGA, usa esa misma biblioteca y el orden de RTL del script. Selecciona `neorv32_tcu_top` como top y asigna el reloj, reset, UART y GPIO según la placa.
+El script ejecuta los bancos y, con `NEORV32_HOME` definido, analiza la lista de fuentes oficial en la biblioteca `neorv32` y elabora `neorv32_tcu_top`. Para generar el proyecto FPGA y el bitstream, sigue [Implementación en Basys 3](vivado.md).
 
 ## Firmware
 

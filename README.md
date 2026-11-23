@@ -8,10 +8,11 @@ SoC NEORV32 con una unidad de cómputo tensorial (TCU) para multiplicación de m
 | `sim/` | Bancos de pruebas y vectores del proyecto |
 | `firmware/exp_37_lectura_incremental/` | Comparación de lecturas de resultados en matrices de 8×8 |
 | `firmware/exp_38_control_tcu/` | Evaluación del comando de limpieza del acumulador en matrices de 8×8 |
-| `firmware/perfil_4_a_128/` | Perfil CPU y DMA para seis tamaños de matriz |
+| `vivado/` | Restricciones Basys 3 y scripts para crear el proyecto y generar el bitstream |
 | `docs/` | Arquitectura, compilación, ejecución y verificación |
 
 - [Arquitectura y mapa de registros](docs/arquitectura.md)
+- [Implementación en Basys 3](docs/vivado.md)
 - [Compilación y ejecución](docs/reproduccion.md)
 - [Protocolo experimental y verificación](docs/validacion.md)
 
