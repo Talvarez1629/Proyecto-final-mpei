@@ -1,0 +1,31 @@
+# Firmware y simulación
+build/
+*.o
+*.d
+*.elf
+*.bin
+*.asm
+*.cf
+*.vcd
+*.ghw
+*.fst
+neorv32_raw_exe.*
+neorv32_imem_image.vhd
+metricas_wrapper_xbus.csv
+
+# Proyectos generados y archivos locales
+.Xil/
+*.cache/
+*.runs/
+*.gen/
+*.sim/
+*.hw/
+*.xpr
+*.jou
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+__pycache__/
+.DS_Store
